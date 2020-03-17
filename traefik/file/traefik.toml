@@ -1,0 +1,19 @@
+[file]
+
+# Backends
+[backends]
+  [backends.nexus]
+    [backends.nexus.servers]
+      [backends.nexus.servers.server0]
+        url = "http://NEXUS_HOST:8081"
+
+[frontends]
+  [frontends.nexus]
+    entryPoints = ["http", "https"]
+    backend = "nexus"
+    passHostHeader = true
+  [frontends.nexus.headers]
+    SSLRedirect = true
+  [frontends.nexus.routes]
+    [frontends.nexus.routes.route0]
+      rule = "Host:nexus.ENVIRONMENT_FQDN"

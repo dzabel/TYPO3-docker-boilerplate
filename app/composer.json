@@ -1,0 +1,27 @@
+{
+        "repositories": [
+                { "type": "composer", "url": "https://composer.typo3.org/"},
+                { "type": "composer", "url": "https://packagist.phpcomposer.com"},
+                { "type": "git", "url": "https://dzabel@bitbucket.org/dzabel/wellness.git"},
+                    { "packagist": false }
+        ],
+        "name": "typo3/cms-base-distribution",
+        "description" : "TYPO3 CMS Base Distribution",
+        "license": "GPL-2.0+",
+        "require": {
+                "php": ">=5.5.0,<7.3.0",
+                "typo3/cms": "7.6.32",
+                "typo3-ter/vhs": "3.1.0",
+                "typo3-ter/devlog": "3.0.2",
+                "typo3-ter/realurl": "2.4.0",
+                "typo3-ter/robots": "1.0.2",
+                "cobweb/flush_language_cache": "1.0.1",
+                "dza/wellness": "dev-feature/typo3_7x"
+        },
+        "extra": {
+                "typo3/cms": {
+                        "cms-package-dir": "{$vendor-dir}/typo3/cms",
+                        "web-dir": "web"
+                }
+        }
+}

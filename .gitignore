@@ -1,6 +1,7 @@
 .DS_Store
 .idea
 nbproject
+/app/.composer/auth.json
 /backup/*
-/app/*
+/app/web/*
 /docker-compose.yml
